@@ -16,7 +16,6 @@
 
 car.printdesc(); */
 
-
 /* function first(){
     return this;
 }
@@ -52,21 +51,18 @@ console.log(myObject.value);
 console.log(third.call(myObject, 'neko'));
 console.log(third.apply(myObject, ['meow'])); */
 
-
-
-function fifth(){
-    console.log(this.firstname + ' ' + this.lastname);
+function fifth() {
+  console.log(this.firstname + " " + this.lastname);
 }
 
 let customer1 = {
-    firstname : ' bob',
-    lastname : ' meow'
-}
+  firstname: " bob",
+  lastname: " meow",
+};
 let customer2 = {
-    firstname : ' boby',
-    lastname : ' meowy'
-}
-
+  firstname: " boby",
+  lastname: " meowy",
+};
 
 console.log(customer1.firstname + " " + customer1.lastname);
 console.log(customer2.firstname + " " + customer2.lastname);

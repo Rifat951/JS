@@ -1,39 +1,35 @@
+let counter = (function () {
+  let count = 0;
 
-let counter = (function(){
+  function print(message) {
+    console.log(`${message}  ${count}`);
+  }
+  function getcount() {
+    return count;
+  }
 
-    let count = 0;
+  function setcount(value) {
+    count = value;
+  }
 
-    function print(message){
-        console.log (`${message}  ${count}`);
-    }
-    function getcount(){
-        return count;
-    }
+  function increment() {
+    count = count + 1;
+    print("After increment : ");
+  }
+  function resetcount() {
+    print("Before reset ");
+    count = 0;
+    print("After reset ");
+  }
 
-    function setcount(value){
-        count = value ;
-    }
+  // revealing the function by including them as a property
 
-    function increment(){
-        count = count + 1;
-        print("After increment : ");
-    }
-    function resetcount(){
-
-        print('Before reset ');
-        count = 0;
-        print('After reset ');
-    }
-
-    // revealing the function by including them as a property
-
-    return {
-        get : getcount,
-        set : setcount,
-        inc : increment,
-        reset : resetcount
-    }
-
+  return {
+    get: getcount,
+    set: setcount,
+    inc: increment,
+    reset: resetcount,
+  };
 })();
 
 counter.set(2);

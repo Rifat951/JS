@@ -1,19 +1,13 @@
-
-
 let pattern = /xyz/;
- 
+
 console.log(pattern);
 console.log(typeof pattern);
 
-
-let val = 'This is xyz test';
+let val = "This is xyz test";
 
 console.log(pattern.test(val));
 
-
-
-console.log(val.replace(pattern, 'just replace'));
-
+console.log(val.replace(pattern, "just replace"));
 
 console.log(val.match(pattern));
 

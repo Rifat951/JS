@@ -1,1 +1,3 @@
-This folder has the basics of JS
+# This folder has the basics of JS
+
+--
