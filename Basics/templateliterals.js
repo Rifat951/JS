@@ -8,11 +8,12 @@ let setance = `asddddddddddddd
 console.log(setance);
  */
 
-
-function getReasonCount(){
-    return 1;
+function getReasonCount() {
+  return 1;
 }
 
-let interpolation = `Give me ${(getReasonCount() == 1)?'one good reason' : 'a few reasons'} to try this`;
+let interpolation = `Give me ${
+  getReasonCount() == 1 ? "one good reason" : "a few reasons"
+} to try this`;
 
 console.log(interpolation);

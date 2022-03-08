@@ -1,49 +1,40 @@
-
-
 //var stands for global varibale
 // let works more like a local variable
 
+var obj = (function () {
+  let count = 0;
 
-var obj = (function(){
+  function printmsg(message) {
+    console.log(message + count);
+  }
 
-    let count = 0;
-    
-    function printmsg (message){
-        console.log(message + count);
-    }
+  return {
+    // val : count, // not clear over here
+    // // it might return the number of count ?
 
-    return {
+    set: function (value) {
+      count = value;
+    },
 
-        // val : count, // not clear over here
-        // // it might return the number of count ?
+    get: function () {
+      return count;
+    },
 
-        set : function(value){
-            count = value;
-        },
-        
-        get : function(){
-            return count;
-        },
-        
-        increment : function(){
-            count = count + 1;
-            printmsg("After increment.. ");
-        },
-        // val returns the count and increment
+    increment: function () {
+      count = count + 1;
+      printmsg("After increment.. ");
+    },
+    // val returns the count and increment
 
-        //do a reset function
+    //do a reset function
 
-        reset : function(){
-
-            printmsg('Before Reset : ');
-            count = 0;
-            printmsg('After Reset  : ');
-
-        }
-
-    }
+    reset: function () {
+      printmsg("Before Reset : ");
+      count = 0;
+      printmsg("After Reset  : ");
+    },
+  };
 })();
-
 
 // obj.increment();
 // obj.increment();
